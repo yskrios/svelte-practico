@@ -12,7 +12,7 @@
 <style>
   .Main-container {
     display: grid;
-    grid-template-columns: (auto, 1024px);
+    grid-template-columns: minmax(auto, 1024px);
     justify-content: center;
     align-items: center;
   }
