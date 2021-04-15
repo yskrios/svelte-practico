@@ -1,10 +1,12 @@
-<script></script>
+<script>
+  import Sidebar from "./Sidebar.svelte";
+</script>
 
 <main class="Main">
   <div class="Main-container">
     <div class="main-content">
       <slot />
-      <div class="sidebar">sidebar</div>
+      <Sidebar />
     </div>
   </div>
 </main>

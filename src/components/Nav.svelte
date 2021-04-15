@@ -91,7 +91,7 @@
     content: "";
     width: calc(100% - 1em);
     height: 2px;
-    background-color: rgb(255, 62, 0);
+    background-color: rgba(255, 62, 0);
     display: block;
     bottom: -1px;
   }
@@ -103,7 +103,7 @@
     font-size: 14px;
     font-weight: 300;
     transition: all 0.3s ease-in-out 0s;
-    color: rbga(25, 26, 34, 0.7);
+    color: rgba(25, 26, 34, 0.7);
   }
 
   a:hover {
