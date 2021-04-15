@@ -2,45 +2,66 @@
   export let segment;
 </script>
 
-<nav>
-  <ul>
-    <li>
-      <a aria-current={segment === undefined ? "page" : undefined} href="."
-        >home</a
-      >
-    </li>
-    <li>
-      <a aria-current={segment === "about" ? "page" : undefined} href="about"
-        >about</a
-      >
-    </li>
-    <li>
-      <a
-        aria-current={segment === "contact" ? "page" : undefined}
-        href="contact">contact</a
-      >
-    </li>
-    <li>
-      <a
-        aria-current={segment === "general" ? "page" : undefined}
-        href="contact">general</a
-      >
-    </li>
-    <li>
-      <a
-        rel="prefetch"
-        aria-current={segment === "blog" ? "page" : undefined}
-        href="blog">blog</a
-      >
-    </li>
-  </ul>
+<nav class="Nav">
+  <div class="nav-container">
+    <div class="nav-content">
+      <div class="nav-social">
+        <ul>
+          <li>
+            <a
+              aria-current={segment === undefined ? "page" : undefined}
+              href=".">home</a
+            >
+          </li>
+          <li>
+            <a
+              aria-current={segment === "about" ? "page" : undefined}
+              href="about">about</a
+            >
+          </li>
+          <li>
+            <a
+              aria-current={segment === "contact" ? "page" : undefined}
+              href="contact">contact</a
+            >
+          </li>
+          <li>
+            <a
+              aria-current={segment === "general" ? "page" : undefined}
+              href="contact">general</a
+            >
+          </li>
+          <li>
+            <a
+              rel="prefetch"
+              aria-current={segment === "blog" ? "page" : undefined}
+              href="blog">blog</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </nav>
 
 <style>
-  nav {
-    border-bottom: 1px solid rgba(255, 62, 0, 0.1);
+  .Nav {
+    border-bottom: 1px solid rbga(255, 0, 121, 0.2);
     font-weight: 300;
-    padding: 0 1em;
+    background-color: #fafbfc;
+    color: #191a22;
+  }
+
+  .nav-container {
+    display: grid;
+    grid-template-columns: minmax(auto, 1024px);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
   }
 
   ul {
@@ -77,7 +98,15 @@
 
   a {
     text-decoration: none;
-    padding: 1em 0.5em;
+    padding: 1em 1em 1em 0;
     display: block;
+    font-size: 14px;
+    font-weight: 300;
+    transition: all 0.3s ease-in-out 0s;
+    color: rbga(25, 26, 34, 0.7);
+  }
+
+  a:hover {
+    color: rgba(25, 26, 34, 1);
   }
 </style>
